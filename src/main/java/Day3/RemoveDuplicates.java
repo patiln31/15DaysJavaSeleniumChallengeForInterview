@@ -13,12 +13,10 @@ public class RemoveDuplicates {
     public static int[] removeDuplicates(int[] nums) {
         // Using LinkedHashSet to maintain insertion order and remove duplicates
         Set<Integer> uniqueSet = new LinkedHashSet<>();
-
         // Adding each number to the set, duplicates will be ignored
         for (int num : nums) {
             uniqueSet.add(num);
         }
-
         // Converting the set back to an array of integers
         return uniqueSet.stream().mapToInt(Integer::intValue).toArray();
     }
